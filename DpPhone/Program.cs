@@ -4,61 +4,147 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DpPhone
+namespace DpHomeWork1
 {
+    //////////////////////Computer
     class Program
     {
         static void Main(string[] args)
         {
-            Samsung samsung = new Samsung();
-            Nokia nokia = new Nokia();
+            Dell dell = new Dell();
+            Sony sony = new Sony();
 
-            Console.WriteLine(samsung.Accumulator());
-            Console.WriteLine(samsung.Display());
+            Console.WriteLine(dell.Mainboard());
+            Console.WriteLine(dell.Processor());
 
-            Console.WriteLine(nokia.Accumulator());
-            Console.WriteLine(nokia.Display());
+            Console.WriteLine(sony.Mainboard());
+            Console.WriteLine(sony.Processor());
         }
     }
-     public interface IPhone
+    public interface IComputer
     {
-        string Display();
-        string Accumulator();
+        string Mainboard();
+        string Processor();
     }
 
-    public interface Accumulator
+    public class Dell : IComputer
     {
-        string AccumulatorInfo();
-    }
-
-    public interface Display
-    {
-        string DisplayInfo();
-    }
-
-    public class Samsung : IPhone
-    {
-        public string Accumulator()
+        public string Mainboard()
         {
-            return "Samsung Accumulator";
+            return "Dell Mainboard";
         }
 
-        public string Display() 
+        public string Processor()
         {
-            return "Samsung Display";
+            return "Dell Processor";
         }
     }
 
-    public class Nokia : IPhone
+    public class Sony : IComputer
     {
-        public string Accumulator()
+        public string Mainboard()
         {
-            return "Nokia Accumulator";
+            return "Sony Mainboard";
         }
 
-        public string Display()
+        public string Processor()
         {
-            return "Nokia Display";
+            return "Sony Processor";
         }
     }
+
+    ////////////////////////////Car
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Ford ford = new Ford();
+    //        Toyota toyota = new Toyota();
+
+    //        Console.WriteLine(ford.Engine());
+    //        Console.WriteLine(ford.Boby());
+
+    //        Console.WriteLine(toyota.Engine());
+    //        Console.WriteLine(toyota.Boby());
+    //    }
+    //}
+    //public interface ICar
+    //{
+    //    string Engine();
+    //    string Boby();
+    //}
+
+    //public class Ford : ICar
+    //{
+    //    public string Engine()
+    //    {
+    //        return "Ford Engine";
+    //    }
+
+    //    public string Boby()
+    //    {
+    //        return "Ford Boby";
+    //    }
+    //}
+
+    //public class Toyota : ICar
+    //{
+    //    public string Engine()
+    //    {
+    //        return "Toyota Engine";
+    //    }
+
+    //    public string Boby()
+    //    {
+    //        return "Toyota Boby";
+    //    }
+    //}
+
+    ////////////////////Phone
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Samsung samsung = new Samsung();
+    //        Nokia nokia = new Nokia();
+
+    //        Console.WriteLine(samsung.Accumulator());
+    //        Console.WriteLine(samsung.Display());
+
+    //        Console.WriteLine(nokia.Accumulator());
+    //        Console.WriteLine(nokia.Display());
+    //    }
+    //}
+    // public interface IPhone
+    //{
+    //    string Display();
+    //    string Accumulator();
+    //}
+
+
+    //public class Samsung : IPhone
+    //{
+    //    public string Accumulator()
+    //    {
+    //        return "Samsung Accumulator";
+    //    }
+
+    //    public string Display() 
+    //    {
+    //        return "Samsung Display";
+    //    }
+    //}
+
+    //public class Nokia : IPhone
+    //{
+    //    public string Accumulator()
+    //    {
+    //        return "Nokia Accumulator";
+    //    }
+
+    //    public string Display()
+    //    {
+    //        return "Nokia Display";
+    //    }
+    //}
 }
