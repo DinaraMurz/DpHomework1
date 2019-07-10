@@ -40,13 +40,11 @@ namespace DpPhone
     {
         public string Accumulator()
         {
-            /////
             return "Samsung Accumulator";
         }
 
         public string Display() 
         {
-            /////
             return "Samsung Display";
         }
     }
@@ -55,13 +53,11 @@ namespace DpPhone
     {
         public string Accumulator()
         {
-            /////
             return "Nokia Accumulator";
         }
 
         public string Display()
         {
-            /////
             return "Nokia Display";
         }
     }
